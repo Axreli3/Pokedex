@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+
+
+.heard {
+    @apply absolute top-0 left-0 m-2 text-white font-bold text-lg flex items-center
+    
+}
+
+.attack {
+    @apply absolute top-0 right-0 m-2 text-white font-bold text-lg flex items-center
+}
+
+.defense {
+    @apply absolute bottom-0 left-0 m-2 text-white font-bold text-lg flex items-center
+}
+
+.speed {
+    @apply absolute bottom-0 right-0 m-2 text-white font-bold text-lg flex items-center
+}
+
+.black{
+  @apply mr-2 text-black
+}

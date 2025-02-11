@@ -5,7 +5,6 @@ import '../styles/Pokedex.css'
 import { FaHeart, FaBolt, FaShieldAlt, FaTachometerAlt } from 'react-icons/fa';
 import { GiGladius } from "react-icons/gi";
 
-// Componente de la tarjeta de Pokémon con animación
 function PokemonCard({ url }) {
   const [pokemon, setPokemon] = useState({});
   const [isVisible, setIsVisible] = useState(false);
@@ -20,12 +19,12 @@ function PokemonCard({ url }) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            observer.unobserve(entry.target); // Deja de observar una vez que ha sido visible
+            observer.unobserve(entry.target); 
           }
         });
       },
       {
-        threshold: 0.5, // El 50% del elemento debe ser visible para que se active
+        threshold: 0.5, 
       }
     );
 
@@ -50,7 +49,7 @@ function PokemonCard({ url }) {
   return (
     <Link to={`/pokedex/${pokemon.name}`} className={`border-black border-4 rounded-xl pokecard_type--${types?.[0]}`}>
       <div
-        id={pokemon.name} // Agregado para que el observer funcione con esta tarjeta
+        id={pokemon.name} 
         className={`bg-no-repeat bg-cover bg-top h-75 w-60 relative transition-all transform ${
           isVisible ? "scale-105 opacity-100" : "scale-95 opacity-50"
         } duration-500 ease-in-out`}
